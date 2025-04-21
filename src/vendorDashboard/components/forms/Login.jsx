@@ -39,10 +39,13 @@ const Login = ({ showWelcomeHandler }) => {
       window.location.reload();
       const vendorData = await vendorResponse.json();
       if (vendorResponse.ok) {
-        const vendorFirmId = vendorData.vendorFirmId;
-        const vendorFirmName = vendorData.vendor.firm[0].firmName;
+        const vendorFirmId = vendorData?.vendorFirmId;
+        const vendorFirmName = vendorData?.vendor?.firm[0]?.firmName;
+        const vendorName = vendorData?.vendor?.username;
         localStorage.setItem("firmId", vendorFirmId);
         localStorage.setItem("firmName", vendorFirmName);
+        localStorage.setItem("vendorName", vendorName);
+        localStorage.setItem("vendorId", vendorId);
       }
     } catch (error) {
       alert("login fail");

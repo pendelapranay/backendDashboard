@@ -17,8 +17,10 @@ body {
   background-color: #f46036;
   align-items: center;
   color: white;
-  padding: 0 20px;
+  padding: 0 3%;
   font-size: large;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
 }
 
 .userAuth {

@@ -12,7 +12,10 @@ const NavBar = ({
     <div className="navSection">
       <div className="company">Vendor Dashboard</div>
       <div className="firmName">
-        <h4>Firname : {firmName}</h4>
+        <h4>Vendor: {localStorage.getItem("vendorName")??''}</h4>
+      </div>
+      <div className="firmName">
+        <h4>Restuarant : {firmName??''}</h4>
       </div>
       <div className="userAuth">
         {!showLogOut ? (

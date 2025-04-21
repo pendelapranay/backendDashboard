@@ -5,6 +5,7 @@ const SideBar = ({
   showProductHandler,
   showAllProductsHandler,
   showFirmTitle,
+  showUserDetailsHandler,
 }) => {
   return (
     <div className="sideBarSection">
@@ -12,7 +13,7 @@ const SideBar = ({
         {showFirmTitle ? <li onClick={showFirmHandler}>Add Firm</li> : ""}
         <li onClick={showProductHandler}>Add Product</li>
         <li onClick={showAllProductsHandler}>All Products</li>
-        <li>User Details</li>
+        <li onClick={showUserDetailsHandler}>User Details</li>
       </ul>
     </div>
   );
